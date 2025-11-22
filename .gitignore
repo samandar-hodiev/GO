@@ -1,0 +1,9 @@
+
+# MacOS fayllari
+.DS_Store
+
+# Node.js fayllari
+node_modules/
+
+# Log fayllar
+*.log
