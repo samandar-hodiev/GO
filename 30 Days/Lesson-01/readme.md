@@ -58,21 +58,21 @@
 ```
 ├── .git
 ├── cmd
- |   └── myapp
- |       └── main.go
+|   └── myapp
+|       └── main.go
 ├── examples
- |   └── example1
- |       └── main.go
+|   └── example1
+|       └── main.go
 ├── internal
- |   ├── config
- |   |   └── config.go
- |   └── store
- |       └── store.go
+|   ├── config
+|   |   └── config.go
+|   └── store
+|       └── store.go
 ├── pkg
- |   ├── public1
- |   |   └── public1.go
- |   └── public2
- |       └── public2.go
+|   ├── public1
+|   |   └── public1.go
+|   └── public2
+|       └── public2.go
 ├── go.mod
 └── go.sum
 ```
