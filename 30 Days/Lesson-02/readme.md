@@ -122,3 +122,94 @@ package main
 - return qilmaydi
 - dastur shu yerda boshlanadi
 - bitta bo‘lishi kerak
+
+
+<br><br><br>
+
+
+# `Println`, `Printf`, `Print` ...
+
+- `print` va `println` — tilda ichki, faqat tez `debugging` uchun; xatti-harakatlari implementatsiyaga bog‘liq va rasmiy format kafolatlanmagan. `println` oxirida yangi qator qo‘yadi, `print` qo‘ymaydi. Ishonchli, production-ga oid vosita emas.
+
+- `fmt.Print` — argumentlarni chiqaradi, yangi qator qo‘ymaydi.
+
+- `fmt.Println` — argumentlar orasiga bo‘sh joy qo‘yadi va oxirida yangi qator qo‘yadi.
+
+- `fmt.Printf` — format string bilan ishlaydi (formatlash, width, precision, verb-lar va hokazo).
+
+- `fmt.Fprint` / `Fprintln` / `Fprintf` — xuddi yuqoridagilar, lekin natijani istalgan `io.Writerga` yozadi (masalan `fayl` yoki `http.ResponseWriter`).
+
+
+<br>
+
+---
+
+# `fmt.Print`
+
+> Argumentlarni ketma-ket chiqaradi, yangi qator qo‘ymaydi.
+
+```
+fmt.Print("a", 1) // "a1"
+```
+
+<br>
+
+# `fmt.Println`
+
+> Argumentlar orasiga bo‘sh joy qo‘yadi va oxirida yangi qator `\n` qo‘yadi.
+
+```
+fmt.Println("a", 1) // "a 1\n"
+```
+
+<br>
+
+# `fmt.Printf`
+
+> Format verb’lari va qoidalari.
+
+### Eng ko‘p ishlatiladigan verb’lar:
+
+- `%v` — default qiymat (general).
+
+- `%+v` — struct uchun maydon nomlari bilan.
+
+- `%#v` — Go-syntax ko‘rinishida (reproducible).
+
+- `%T` — qiymat turi.
+
+- `%d` — onlik integer.
+
+- `%b` — binary.
+
+- `%o` — octal.
+
+- `%x`, `%X` — hex.
+
+- `%f` — float (decimal notation).
+
+- `%e` — scientific (1.23e+03).
+
+- `%g` — compact float (choose %e or %f).
+
+- `%s` — string (raw).
+
+- `%q` — quoted string ("..." with escapes).
+
+- `%t` — boolean.
+
+- `%p` — pointer address.
+
+- `%c` — rune as character.
+
+<br>
+
+### Flag va width/precision misoli:
+
+- `%-10s` — chapga hizalash, width = 10.
+
+- `%010d` — 0 bilan to‘ldirish, width = 10.
+
+- `%.2f` — float uchun precision = 2.
+
+---
