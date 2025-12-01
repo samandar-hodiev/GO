@@ -3,3 +3,4 @@
 - fmt.Scan / Scanf / Scanln
 - simple error handling
 - if err != nil pattern
+
